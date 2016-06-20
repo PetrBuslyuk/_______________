@@ -1,0 +1,20 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "author": "Petr Buslyuk",
+  "description": "First version of node js server",
+  "main": "app.js",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": "5.6.0"
+  },
+  "dependencies": {
+    "express": "4.14.0",
+    "mongoose": "^4.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PetrBuslyuk/sales.git",
+    "private": true
+  }
+}
