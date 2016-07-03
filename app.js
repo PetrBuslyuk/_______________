@@ -3,10 +3,11 @@ var express = require('express'),
     config  = require('./config'),
     mongoose = require('mongoose'),
     user = require('./routing/UserRoute'),
+    product = require('./routing/ProductsRoute'),
     dbURI = 'mongodb://localhost/sales';
 
-//var sUSERNAME = process.env.sUSERNAME || 'PetrBuslyuk';
-//var sPASSWORD = process.env.sPASSWORD || '1062543aa';
+//var sUSERNAME = process.env.sUSERNAME || '';
+//var sPASSWORD = process.env.sPASSWORD || '';
 var sPORT = process.env.sPORT || '3000';
 var sHOST = process.env.sHOST || 'localhost';
 var sDB = process.env.sDB || 'sales';
@@ -49,6 +50,11 @@ app.route('/user')
         user.DeleteUser(req,res);
     });
 
+app.route('/products')
+    .post(function(req,res){
+        product.AddProduct(req,res);
+    });
+
 app.route('/auth')
     .post(function(req,res){
         user.Authorise(req,res);
@@ -69,7 +75,6 @@ app.route('/subscribe/:id')
     .post(function(req,res){
 
     });
-
 
 //Listen server
 app.listen(sPORT, sHOST, function () {
