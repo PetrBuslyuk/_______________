@@ -11,8 +11,9 @@
       "loginOk": "",
       "loginErr": ""
     },
-    "registration": {
-      "title": "",
+    "user": {
+      "profileTitle": "",
+      "registerTitle": "",
       "distinctionLabel": "Как к Вам обращаться?",
       "distinctionVariants": [
         "",
@@ -52,12 +53,17 @@
       "registrationBtnInfo": "",
       "registrationOkInfo": "",
       "registrationErrInfo": "",
-      "registrationLink":""
+      "registrationLinkBtn": "",
+      "registrationLink": "",
+      "saveProfileBtn": "",
+      "saveProfileBtnInfo": "",
+      "saveProfileOkInfo": "",
+      "saveProfileErrInfo": ""
     },
     "forgotPasword": {
       "title": "",
       "forgotPassLabel": "",
-      "forgotPassFieldInfo": "",
+      "forgotPassField": "",
       "recoverPassBtn": "",
       "secretQuestionLabel": "",
       "secretQuestion1": "",
@@ -67,9 +73,30 @@
       "recoverPassOk": "",
       "recoverPassErr": ""
     },
-    "category": {
-    },
-    "user": {
+    "sections": {
+      "title": "",
+      "auto":{
+        "title":"Авто/Мото",
+        "subcategories":{
+
+        }
+      },
+      "appliances":{
+        "title":"Техника",
+        "subcategories":{
+          "telephones":{
+
+          },
+          "accessories":{
+
+          }
+        }
+
+      },
+      "":{
+
+      }
+
     },
     "comment": {
       "title": "",
@@ -93,28 +120,28 @@
       "zip": "",
       "details": "",
       "saveDeliveryBtn": "",
-      "deliveryLink":"",
+      "deliveryLink": "",
       "okSavedDelivery": "",
       "errSaveDelivery": ""
     },
     "contactWithUs": {
       "title": "",
-      "titleMess":"",
+      "titleMess": "",
       "message": "",
-      "contactLink":"",
+      "contactLink": "",
       "sendMessBtn": "",
       "okSendMess": "",
       "errSendMess": ""
     },
     "newsSending": {
-      "title":"",
-      "choiseMembers":"",
-      "titleMess":"",
-      "messType":"",
-      "message":"",
-      "sendNewsBtn":"",
-      "okSendNews":"",
-      "errSendNews":""
+      "title": "",
+      "choiseMembers": "",
+      "titleMess": "",
+      "messType": "",
+      "message": "",
+      "sendNewsBtn": "",
+      "okSendNews": "",
+      "errSendNews": ""
     },
     "userRang": {
       "tenSales": "",

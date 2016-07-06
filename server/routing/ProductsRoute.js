@@ -1,6 +1,6 @@
 var Product = require('../models/Product');
 
-this.AddProduct = function(req, res){
+const AddProduct = function(req, res){
     var r = req.body;
     console.log('\n Add product', r);
     var newProduct = new Product(r);
@@ -15,4 +15,6 @@ this.AddProduct = function(req, res){
     });
 };
 
-module.exports = this;
+module.exports = {
+    AddProduct
+};

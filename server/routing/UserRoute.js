@@ -1,6 +1,6 @@
 var User = require('../models/User');
 
-this.AddUser = function(req, res){
+const AddUser = function(req, res){
     var r = req.body;
     console.log('\n Add user', r);
     var newUser = new User(r);
@@ -15,7 +15,7 @@ this.AddUser = function(req, res){
     });
 };
 
-this.EditUser = function(req, res){
+const EditUser = function(req, res){
     var r = req.body;
     console.log('\n Edit user', r);
     if (!r.id){
@@ -33,7 +33,7 @@ this.EditUser = function(req, res){
     }
 };
 
-this.DeleteUser = function(req, res){
+const DeleteUser = function(req, res){
     var r = req.body;
     console.log('\n\n Delete user', r);
     if (!r.id){
@@ -51,7 +51,7 @@ this.DeleteUser = function(req, res){
     }
 };
 
-this.Authorise = function(req, res){
+const Authorise = function(req, res){
     var r = req.body;
     console.log('\n\n Authorise ', r);
 
@@ -65,4 +65,9 @@ this.Authorise = function(req, res){
     });
 };
 
-module.exports = this;
+module.exports = {
+    AddUser,
+    EditUser,
+    DeleteUser,
+    Authorise
+};

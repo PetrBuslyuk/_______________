@@ -76,6 +76,8 @@ app.route('/subscribe/:id')
 
     });
 
+app.use('/', express.static('public'));
+
 //Listen server
 app.listen(sPORT, sHOST, function () {
     console.log('Express server started on port %s at %s', sPORT, sHOST);
