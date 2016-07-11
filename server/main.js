@@ -4,6 +4,7 @@ var express = require('express'),
     mongoose = require('mongoose'),
     user = require('./routing/UserRoute'),
     product = require('./routing/ProductsRoute'),
+    underscore = resuire('underscore');
     dbURI = 'mongodb://localhost/sales';
 
 //var sUSERNAME = process.env.sUSERNAME || '';
