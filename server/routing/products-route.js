@@ -1,4 +1,4 @@
-var Product = require('../models/Product');
+var Product = require('../models/product');
 
 const AddProduct = function(req, res){
     var r = req.body;

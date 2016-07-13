@@ -2,9 +2,8 @@
 var express = require('express'),
     config  = require('./config'),
     mongoose = require('mongoose'),
-    user = require('./routing/UserRoute'),
-    product = require('./routing/ProductsRoute'),
-    underscore = resuire('underscore');
+    user = require('./routing/user-route'),
+    product = require('./routing/products-route'),
     dbURI = 'mongodb://localhost/sales';
 
 //var sUSERNAME = process.env.sUSERNAME || '';
@@ -81,5 +80,5 @@ app.use('/', express.static('public'));
 
 //Listen server
 app.listen(sPORT, sHOST, function () {
-    console.log('Express server started on port %s at %s', sPORT, sHOST);
+    console.log('Server started http://%s:%s', sHOST , sPORT);
 });

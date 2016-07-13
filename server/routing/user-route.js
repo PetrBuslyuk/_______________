@@ -1,4 +1,4 @@
-var User = require('../models/User');
+var User = require('../models/user');
 
 const AddUser = function(req, res){
     var r = req.body;
