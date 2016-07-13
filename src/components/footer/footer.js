@@ -30,8 +30,8 @@ class Footer extends React.Component {
         return (
             <footer>
                 {footer.map((el) => (
-                    <Link key={el.id} to={`/${el.link}`}>
-                        <div className="footerElem">{el.title}</div>
+                    <Link className="footerElem" key={el.id} to={`/${el.link}`}>
+                        {el.title}
                     </Link>
                 ))}
             </footer>

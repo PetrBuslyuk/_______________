@@ -59,7 +59,7 @@ foter:hover{
     height: 20px;
 }
 
-header, footer {
+footer {
     color: white;
     border-radius: 5px 5px 0 0;
     background-color: #000;
