@@ -4,12 +4,6 @@ class Content extends React.Component {
     constructor(props) {
         super(props)
     }
-    componentWillMount(){
-
-    }
-    componentDidMount(){
-
-    }
     render() {
         return (
             <main>
