@@ -4,28 +4,37 @@ import {Link} from 'react-router'
 class Header extends React.Component {
     constructor(props) {
         super(props)
-        this.state = { header: [] }
-    }
-    componentDidMount(){
-        this.setState({header:{
+        this.header = {
             title:"Главная",
             login: {
-                link:"login",
+                link:"signin",
                 title: "Логин"
             },
             registration: {
-                link:"registration",
+                link:"signup",
                 title: "Регистрация"
             }
-        }})
+        }
     }
-    //<Link to={`/${header.login.link}`}>{header.login.title}</Link>
-    //<Link to={`/${header.registration.link}`}>{header.registration.title}</Link>
+    componentWillMount(){
+
+    }
+    componentDidMount(){
+
+    }
     render() {
-        let header = this.state.header
-        return (
+       return (
             <header>
-               <Link to={`/`}>{header.title}</Link>
+                <Link className="headerLeft" to={`/`}>{this.header.title}</Link>
+                <div>
+                    <Link className="headerRight" to={`/${this.header.login.link}`}>
+                        {this.header.login.title}
+                    </Link>
+                    <Link className="headerRight" to={`/${this.header.registration.link}`}>
+                        {this.header.registration.title}
+                    </Link>
+                </div>
+                <div className="clear"></div>
             </header>
         )
     }

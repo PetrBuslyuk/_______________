@@ -46,23 +46,35 @@ table {
     overflow: hidden;
     margin: 0 5%;
 }
+.clear{
+    clear:both;
+}
+header{
+    color: white;
+    border-radius: 0 0 5px 5px;
+    background-color: #000;
+    height: 20px;
+    margin-bottom:1%;
+}
+
+.headerLeft{
+    float:left;
+    padding: 0 2%;
+}
+.headerRight{
+    float:right;
+    padding: 0 2%;
+}
 
 footer {
     display: inline-block;
     width: 90%;
-    height: 20px;
+    height: 3%;
     position: absolute;
     bottom: 0;
-}
-
-foter:hover{
-    height: 20px;
-}
-
-footer {
     color: white;
     border-radius: 5px 5px 0 0;
-    background-color: #000;
+    background-color: #3399FF;
 }
 
 .footerElem{

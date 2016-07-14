@@ -3,11 +3,8 @@ import {Link} from 'react-router'
 
 class Footer extends React.Component {
     constructor(props) {
-        super(props);
-        this.state = { footer: [] };
-    }
-    componentDidMount(){
-    this.setState({footer: [{
+        super(props)
+        this.footer = [{
             "id":1,
             "link":"aboutUs",
             "title":"about us"
@@ -23,19 +20,24 @@ class Footer extends React.Component {
             "id":4,
             "link":"aboutUs2",
             "title":"contact info"
-        }]});
+        }]
+    }
+    componentWillMount(){
+
+    }
+    componentDidMount(){
+
     }
     render() {
-        var footer = this.state.footer;
         return (
             <footer>
-                {footer.map((el) => (
+                {this.footer.map((el) => (
                     <Link className="footerElem" key={el.id} to={`/${el.link}`}>
                         {el.title}
                     </Link>
                 ))}
             </footer>
-        );
+        )
     }
 }
 
