@@ -39,8 +39,4 @@ jspm_packages
 
 /src/css/bootstrap.min.css
 /node_modules/
-
-.idea
-.idea/.name
-**/.idea/workspace.xml
-**/.idea/tasks.xml
+/.idea/

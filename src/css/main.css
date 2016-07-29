@@ -23,53 +23,62 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
+
 body {
     line-height: 1;
 }
+
 ol, ul {
     list-style: none;
 }
+
 blockquote, q {
     quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
     content: '';
     content: none;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
 
 .main {
+    display: block;
     overflow: hidden;
     margin: 0 5%;
 }
-.clear{
-    clear:both;
+
+.clear {
+    clear: both;
 }
-header{
+
+header {
     color: white;
     border-radius: 0 0 5px 5px;
     background-color: #000;
     height: 20px;
-    margin-bottom:1%;
+    margin-bottom: 1%;
 }
 
-.headerLeft{
-    float:left;
+.headerLeft {
+    float: left;
     padding: 0 2%;
 }
-.headerRight{
-    float:right;
+
+.headerRight {
+    float: right;
     padding: 0 2%;
 }
 
 footer {
     display: inline-block;
     width: 90%;
-    height: 3%;
+    height: 0.5%;
     position: absolute;
     bottom: 0;
     color: white;
@@ -77,7 +86,11 @@ footer {
     background-color: #3399FF;
 }
 
-.footerElem{
+footer:hover {
+    height: 3%;
+}
+
+.footerElem {
     border-radius: 5px 5px 0 0;
     display: inline-block;
     vertical-align: middle;
@@ -85,6 +98,6 @@ footer {
     width: 25%;
 }
 
-.footerElem:hover{
+.footerElem:hover {
     background-color: rgb(30, 131, 200);
 }

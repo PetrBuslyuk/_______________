@@ -1,27 +1,17 @@
 'use strict';
 var express = require('express'),
-    config  = require('./config'),
+    use  = require('./app-uses'),
     mongoose = require('mongoose'),
-    user = require('./routing/user-route'),
-    product = require('./routing/products-route'),
-    dbURI = 'mongodb://localhost/sales';
-
-//var sUSERNAME = process.env.sUSERNAME || '';
-//var sPASSWORD = process.env.sPASSWORD || '';
-var sPORT = process.env.sPORT || '3000';
-var sHOST = process.env.sHOST || 'localhost';
-var sDB = process.env.sDB || 'sales';
-var sDBPORT = process.env.sDBPORT || '27017';
-
+    config = require('./config');
 
 var app = express();
-app = config(app);
+app = use(app);
 
 //mongoose.connect('mongodb://'+sUSERNAME+':'+sPASSWORD+'@'+sHOST+':'+sDBPORT+'/'+sDB);
-mongoose.connect('mongodb://'+sHOST+':'+sDBPORT+'/'+sDB);
+mongoose.connect('mongodb://'+config.sHOST+':'+config.sDBPORT+'/'+config.sDB);
 
 mongoose.connection.on('connected', function () {
-    console.log('Mongoose default connection open to ' + dbURI);
+    console.log('Mongoose default connection open to mongodb://'+config.sHOST+':'+config.sDBPORT+'/'+config.sDB);
 });
 
 // If the connection throws an error
@@ -36,49 +26,12 @@ mongoose.connection.on('disconnected', function () {
     process.exit(1);
 });
 
-app.route('/user')
-    //.get(function(req,res){
-    //    user.GetUser(req,res);
-    //})
-    .post(function(req,res){
-        user.AddUser(req,res);
-    })
-    .patch(function(req,res){
-        user.EditUser(req,res);
-    })
-    .delete(function(req,res){
-        user.DeleteUser(req,res);
-    });
-
-app.route('/products')
-    .post(function(req,res){
-        product.AddProduct(req,res);
-    });
-
-app.route('/auth')
-    .post(function(req,res){
-        user.Authorise(req,res);
-    });
-
-//TODO logout, subscribe, subscribe to note
-app.route('/logout')
-    .post(function(req,res){
-
-    });
-
-app.route('/subscribe')
-    .post(function(req,res){
-
-    });
-
-app.route('/subscribe/:id')
-    .post(function(req,res){
-
-    });
+require('./routing/user')(app);
+require('./routing/products')(app);
 
 app.use('/', express.static('public'));
 
 //Listen server
-app.listen(sPORT, sHOST, function () {
-    console.log('Server started http://%s:%s', sHOST , sPORT);
+app.listen(config.sPORT, config.sHOST, function () {
+    console.log('Server started http://%s:%s', config.sHOST , config.sPORT);
 });
