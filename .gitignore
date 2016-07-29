@@ -39,4 +39,5 @@ jspm_packages
 
 /src/css/bootstrap.min.css
 /node_modules/
-/.idea/
+/public/bundle.js
+
